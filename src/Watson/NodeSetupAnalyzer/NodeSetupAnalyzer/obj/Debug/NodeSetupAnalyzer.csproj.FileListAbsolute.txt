@@ -1,0 +1,7 @@
+D:\gitTools\src\Watson\NodeSetupAnalyzer\NodeSetupAnalyzer\bin\Debug\NodeSetupAnalyzer.dll
+D:\gitTools\src\Watson\NodeSetupAnalyzer\NodeSetupAnalyzer\bin\Debug\NodeSetupAnalyzer.pdb
+D:\gitTools\src\Watson\NodeSetupAnalyzer\NodeSetupAnalyzer\bin\Debug\MDSLogAnalyzerCommon.dll
+D:\gitTools\src\Watson\NodeSetupAnalyzer\NodeSetupAnalyzer\bin\Debug\MDSLogAnalyzerCommon.pdb
+D:\gitTools\src\Watson\NodeSetupAnalyzer\NodeSetupAnalyzer\obj\Debug\NodeSetupAnalyzer.csprojResolveAssemblyReference.cache
+D:\gitTools\src\Watson\NodeSetupAnalyzer\NodeSetupAnalyzer\obj\Debug\NodeSetupAnalyzer.dll
+D:\gitTools\src\Watson\NodeSetupAnalyzer\NodeSetupAnalyzer\obj\Debug\NodeSetupAnalyzer.pdb

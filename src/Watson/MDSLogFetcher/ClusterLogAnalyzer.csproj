@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{023F0EAB-F5A9-4B19-9E27-DAF1CD1E7CB9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClusterLogAnalyzer</RootNamespace>
+    <AssemblyName>ClusterLogAnalyzer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MdsActiveClient">
+      <HintPath>.\External\MdsActiveClient.dll</HintPath>
+    </Reference>
+    <Reference Include="MdsCommon">
+      <HintPath>.\External\MdsCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="MdsDataAccessClient">
+      <HintPath>.\External\MdsDataAccessClient.dll</HintPath>
+    </Reference>
+    <Reference Include="MdsStorageClient">
+      <HintPath>.\External\MdsStorageClient.dll</HintPath>
+    </Reference>
+    <Reference Include="MdsSubscriptionClient">
+      <HintPath>.\External\MdsSubscriptionClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analyzers.cs" />
+    <Compile Include="Helper\EmailUtils.cs" />
+    <Compile Include="LogFetcher\ExcelLogFetcher.cs" />
+    <Compile Include="LogFetcher\ILogFetcher.cs" />
+    <Compile Include="Reports\CustomReport.cs" />
+    <Compile Include="Tasks\FeatureUsageTable.cs" />
+    <Compile Include="Tasks\GetFailingClustersTask.cs" />
+    <Compile Include="Tasks\InvokeAnalyzersTask.cs" />
+    <Compile Include="Tasks\TableDownload\TableDownloadFactory.cs" />
+    <Compile Include="WorkflowEngine.cs" />
+    <Compile Include="Helper\ExcelHelper.cs" />
+    <Compile Include="Reports\GlobalReport.cs" />
+    <Compile Include="Tasks\LogResultsTask.cs" />
+    <Compile Include="Mapper.cs" />
+    <Compile Include="Helper\MDSHelper.cs" />
+    <Compile Include="Reports\OutputReport.cs" />
+    <Compile Include="Helper\RegionHelper.cs" />
+    <Compile Include="ResourceTracker.cs" />
+    <Compile Include="Scheduler.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Tasks\TableDownload\TableDownloadTask.cs" />
+    <Compile Include="Tasks\PerClusterTables\ApplicationEventsTable.cs" />
+    <Compile Include="Tasks\PerClusterTables\AvailabilityEventTable.cs" />
+    <Compile Include="Tasks\PerClusterTables\ClusterHealthServiceLogTable.cs" />
+    <Compile Include="Tasks\CrudTable.cs" />
+    <Compile Include="Tasks\PerClusterTables\FilteredHadoopServiceLogTable.cs" />
+    <Compile Include="Tasks\PerClusterTables\GatewayLogsTable.cs" />
+    <Compile Include="Tasks\PerClusterTables\HadoopInstallLogTable.cs" />
+    <Compile Include="Tasks\PerClusterTables\LogEntryPerClusterTable.cs" />
+    <Compile Include="Tasks\LogEntryTable.cs" />
+    <Compile Include="LogFetcher\MDSLogFetcher.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\PerClusterTables\PerClusterTable.cs" />
+    <Compile Include="Tasks\PerClusterTables\SetupLogTable.cs" />
+    <Compile Include="Tasks\WorkflowTask.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MDSLogAnalyzerCommon\MDSLogAnalyzerCommon\MDSLogAnalyzerCommon.csproj">
+      <Project>{dcd712b7-1a81-4ae4-bf7e-d7202afe7e85}</Project>
+      <Name>MDSLogAnalyzerCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tables\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

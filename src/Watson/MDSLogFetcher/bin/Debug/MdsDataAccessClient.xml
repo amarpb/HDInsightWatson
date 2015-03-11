@@ -1,0 +1,478 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MdsDataAccessClient</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClientNotSupportedException">
+            <summary>
+            The usage is not supported by MdsDataAccessClient
+            </summary>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClientNotSupportedException.#ctor(System.String,System.Object[])">
+            <summary>
+            Initalize an object of the class MdsDataAccessClientNotSupportedException
+            </summary>
+            <param name="format">Format string</param>
+            <param name="args">The arguments for the formatted string</param>
+        </member>
+        <member name="T:Microsoft.Cis.Monitoring.DataAccess.MdsSubscriptionServiceException">
+            <summary>
+            Failed to access the Mds subscription service that MdsDataAccessClient relies on to
+            get the MDS meta object info and SASes to download data from Xstore. This may
+            be caused by an intermittent irresponsiveness of MonWebServer. We can retry the query
+            if this failure happens.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsSubscriptionServiceException.#ctor(System.String,System.Object[])">
+            <summary>
+            Initalize an object of the class MdsSubscriptionServiceException
+            </summary>
+            <param name="format">Format string</param>
+            <param name="args">The arguments for the formatted string</param>
+        </member>
+        <member name="T:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClientException">
+            <summary>
+            MdsDataAccessClient internal exception
+            </summary>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClientException.#ctor(System.String,System.Object[])">
+            <summary>
+            Initalize an object of the class MdsSubscriptionServiceException
+            </summary>
+            <param name="format">Format string</param>
+            <param name="args">The arguments for the formatted string</param>
+        </member>
+        <member name="T:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClientConfigSection">
+            <summary>
+            The configuation section of MdsDataAccessClient
+            </summary>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClientConfigSection.#ctor">
+            <summary>
+            The constructor for initializing an object of MdsDataAccessClientConfigSection
+            </summary>
+        </member>
+        <member name="P:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClientConfigSection.LoggingEnabled">
+            <summary>
+            Whether the MdsDebug log should be enabled or not. The default value is false.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient">
+            <summary>
+            MdsDataAccessClient is the direct-to-xstore client library for accessing MDS data.
+            </summary>
+            <summary>
+            MdsDataAccessClientV2 is the second version of
+            direct-to-xstore client library for accessing MDS data.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.MaxChunkSizeForUnCompressedTables">
+            <summary>
+            Maximum time chunk size in minutes.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.MaxChunkSizeForCompressedTables">
+            <summary>
+            Maximum time chunk size in minutes.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.MaxChunkSizeForCompressedBlobs">
+            <summary>
+            Maximum time chunk size in minutes.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.MaxChunkSizeForBondBlobs">
+            <summary>
+            Maximum time chunk size in minutes for CentralBond format data.
+            There is built in throttling in CentralBondBlobReader which limits maximum 10000 cached rows in memory.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.MaxQueueSize">
+            <summary>
+            Indicates how many GLEs can be in queue at any given point of time.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.#ctor(System.String,System.String,System.Security.Cryptography.X509Certificates.StoreLocation,System.Security.Cryptography.X509Certificates.StoreName,System.Boolean,System.Boolean)">
+            <summary>
+            Initialize an object of MdsDataAccessClient
+            </summary>
+            <param name="mdsEndPoint">The Mds endponit, e.g., https://test1.diagnostics.monitoring.core.windows.net</param>
+            <param name="certName">The certificate name. The default value is empty. If the cert name is empty, we will
+            use the NTLM authentication for accessing MDS services to get the MDS table authentication info.</param>
+            <param name="storeLocation">Cert store Locations. The default value is "CurrentUser".</param>
+            <param name="storeName">Cert store name. The default value is "My".</param>
+            <param name="disableMdsDebugLog">Whether disable MdsDebug log or not. The default value is true for disabling the log. If it is set to true, user must use TextWriterTraceListener</param>
+            <param name="isStandAlone">Whether it is standalone app or not</param>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.#ctor(System.Uri,System.String,System.Security.Cryptography.X509Certificates.StoreLocation,System.Security.Cryptography.X509Certificates.StoreName,System.Boolean,System.Boolean)">
+            <summary>
+            Initialize an object of MdsDataAccessClient
+            </summary>
+            <param name="mdsEndPoint">The Mds endponit, e.g., https://test1.diagnostics.monitoring.core.windows.net</param>
+            <param name="certName">The certificati name. The default value is empty. If the cert name is empty, we will/// use the NTLM authentication for accessing MDS services to get the MDS table authentication info.</param>
+            <param name="storeLocation">Cert store Locations. The default value is "CurrentUser".</param>
+            <param name="storeName">Cert store name. The default value is "My".</param>
+            <param name="disableMdsDebugLog">Whether disable MdsDebug log or not. The default value is true for disabling the log. If it is set to true, user must use TextWriterTraceListener</param>
+            <param name="isStandAlone">Whether it is standalone app or not</param>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.#ctor(System.Uri,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Boolean,System.Boolean)">
+            <summary>
+            Initialize an object of MdsDataAccessClient
+            </summary>
+            <param name="mdsEndPoint">The Mds endponit, e.g., https://test1.diagnostics.monitoring.core.windows.net</param>
+            <param name="certificate">X509 certificate with a private key</param>
+            <param name="disableMdsDebugLog">Whether disable MdsDebug log or not. The default value is true for disabling the log. If it is set to true, user must use TextWriterTraceListener</param>
+            <param name="isStandAlone">Whether it is standalone app or not</param>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.RetrieveCertificate(System.String,System.Security.Cryptography.X509Certificates.StoreName,System.Security.Cryptography.X509Certificates.StoreLocation)">
+            <summary>
+            If incoming uri is https uri but no certificate is attached then we will just initialize the delegate and
+            retrun. If it is https uri as well as certificate is provided, grab it from the local store and use it while
+            creating httpwebrequest.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.GetTabularData(System.String,System.DateTimeOffset,System.DateTimeOffset,System.String,System.Boolean,System.Nullable{System.Int32})">
+            <summary>
+            Get the results of a query against a specific MDS logic table
+            </summary>
+            <param name="mdsLogicTable">A MDS logic table name</param>
+            <param name="startTime">The UTC start date/time. If this argument equals UtcDateTime.MinValue, no start time has been specified and
+            this argument is ignored. Otherwise, only rows whose time is equal or greater (more recent) than this time are returned. </param>
+            <param name="endTime">The UTC end date/time. If this argument equals UtcDateTime.MaxValue, no end time has been specified and this argument
+            is ignored. Otherwise, only rows whose time is less than (older) than this time are returned. </param>
+            <param name="query">The query string.</param>
+            <param name="useIndex">A flag indicates whether the secondary indexed table should be searched if applicable.</param>
+            <param name="partitionIndex">A flag indictes whether this query should focus on a specific MDS table partition. Please see
+            http://sharepoint/sites/AzMon/MonWiki/Wiki%20Pages/Config%202.0%20Doc.aspx  for information on the MDS table partitions.</param>
+            <returns>A collection of table rows in the form of GenericLogicEntity objects</returns>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.GetTabularData(System.String,System.Int32,System.DateTimeOffset,System.DateTimeOffset,System.String,System.Boolean,System.Nullable{System.Int32})">
+             <summary>
+             Get the results of a query against multiple MDS logic tables
+            
+             For instance, given tableNameRegExpr="MdsUnstructuredEvent.*" and
+              nlatestversions=3, this method will return results from the three matched tables:
+                   MdsUnstructuredEventEtwTableVer9v0
+                   MdsUnstructuredEventEtwTableVer7v0
+                   MdsUnstructuredEventEtwTableVer6v0
+             </summary>
+             <param name="mdsTableNameRegExp">The tables to query in a regular expression.</param>
+             <param name="nLatestVersions">The latest n versions. If nLatestVersions is less than 1,  this method queries against ALL matched tables.</param>
+             <param name="startTime"> The UTC start date/time. If this argument equals UtcDateTime.MinValue, no start time has been specified and
+             this argument is ignored. Otherwise, only rows whose time is equal or greater (more recent) than this time are returned. </param>
+             <param name="endTime">The UTC end date/time. If this argument equals UtcDateTime.MaxValue, no end time has been specified and this argument
+             is ignored. Otherwise, only rows whose time is less than (older) than this time are returned. </param>
+             <param name="query">The query string.</param>
+             <param name="useIndex">A flag indicates whether the secondary indexed table should be searched if applicable.</param>
+             <param name="partitionIndex">A flag indictes whether this query should focus on a specific MDS table partition. Please see
+             http://sharepoint/sites/AzMon/MonWiki/Wiki%20Pages/Config%202.0%20Doc.aspx  for information on the MDS table partitions.</param>
+             <returns>A collection of table rows in the form of GenericLogicEntity objects</returns>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.BeginGetTabularData(System.String,System.DateTimeOffset,System.DateTimeOffset,System.String,System.Boolean,System.Nullable{System.Int32},System.AsyncCallback,System.Object)">
+            <summary>
+            Start an asynchronous call of getting the tabular data.
+            </summary>
+            <param name="tablePath">The Mds Logic table name</param>
+            <param name="startTime">Start time</param>
+            <param name="endTime">End time</param>
+            <param name="query">The query string</param>
+            <param name="useIndex">Use secondary index or not</param>
+            <param name="partitionIndex">The partition index. The default value is null.</param>
+            <param name="callback">The callback delegate</param>
+            <param name="state">The state  </param>
+            <returns>An IAsyncResult object for the asynchronous call.</returns>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.BeginGetTabularData(System.String,System.Int32,System.DateTimeOffset,System.DateTimeOffset,System.String,System.Boolean,System.Nullable{System.Int32},System.AsyncCallback,System.Object)">
+            <summary>
+            Get the results of a query against multiple MDS logic tables
+            </summary>
+            <param name="mdsTableNameRegExp">The tables to query in a regular expression.</param>
+            <param name="nLatestVersions">The latest n versions. If nLatestVersions is less than 1,  this method queries against ALL matched tables.</param>
+            <param name="startTime"> The UTC start date/time. If this argument equals UtcDateTime.MinValue, no start time has been specified and
+            this argument is ignored. Otherwise, only rows whose time is equal or greater (more recent) than this time are returned. </param>
+            <param name="endTime">The UTC end date/time. If this argument equals UtcDateTime.MaxValue, no end time has been specified and this argument
+            is ignored. Otherwise, only rows whose time is less than (older) than this time are returned. </param>
+            <param name="query">The query string.</param>
+            <param name="useIndex">A flag indicates whether the secondary indexed table should be searched if applicable.</param>
+            <param name="partitionIndex">A flag indictes whether this query should focus on a specific MDS table partition. Please see
+            http://sharepoint/sites/AzMon/MonWiki/Wiki%20Pages/Config%202.0%20Doc.aspx  for information on the MDS table partitions.</param>
+            <param name="callback">The callback delegate</param>
+            <param name="state">The parameter for the callback</param>
+            <returns>A collection of table rows in the form of GenericLogicEntity objects</returns>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.GetMdsTableDataAccessInfo(Microsoft.Cis.Monitoring.DataAccess.MdsClientQuery)">
+            <summary>
+            
+            </summary>
+            <param name="clientQuery"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.ExecuteMonWebServerQuery(Microsoft.Cis.Monitoring.DataAccess.MdsClientQuery)">
+            <summary>
+            Execute the query through MonWebServer. In MdsDataAccessClient, We only do this for SQL tables.
+            </summary>
+            <param name="clientQuery">The client query</param>
+            <returns>A list of GenericLogicEntities</returns>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.EndGetTabularData(System.IAsyncResult)">
+            <summary>
+            Finish the asynchronous call of GetTabularData.
+            </summary>
+            <param name="ar">The IAsyncResult object that is returned by BeginGetTabularData</param>
+            <returns>An IEnumerable of GenericLogicEntities. </returns>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.GetTables(System.String,System.Int32)">
+            <summary>
+            Get the list of MDS logic tables whose names match the regular expression, and the version constraints.
+            </summary>
+            <param name="tableNameRegExp">The table name regular expression</param>
+            <param name="nLatestVersions">The latest number of versions. If nLastestVersion is equal or less than 0, this method returns
+             matched MDS logic tables. </param>
+            <returns>A list of MDS logic table names</returns>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.BeginGetTables(System.String,System.Int32,System.AsyncCallback,System.Object)">
+            <summary>
+            Get the list of MDS logic tables whose names match the regular expression, and the version constraints.
+            </summary>
+            <param name="tableNameRegExp">The table name regular expression</param>
+            <param name="nLatestVersions">The latest number of versions. If nLastestVersion is equal or less than 0, this method returns
+             matched MDS logic tables. </param>
+            <param name="callback">The callback function.</param>
+            <param name="state">The parameter for the callback function.</param>
+            <returns>A list of MDS logic table names</returns>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.EndGetTables(System.IAsyncResult)">
+            <summary>
+            Finish the asynchronous call of GetTabularData.
+            </summary>
+            <param name="ar">The IAsyncResult object that is returned by BeginGetTabules</param>
+            <returns>An IEnumerable of string for the list of matched MDS logic tables</returns>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.CallHomeBeforeFetchingData(Microsoft.Cis.Monitoring.DataAccess.MdsClientQuery)">
+            <summary>
+            Call the Mds CallHome service to record the start of the client side query.
+            </summary>
+            <param name="clientQuery">The client side query</param>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.CallHomeAfterFailure(Microsoft.Cis.Monitoring.DataAccess.MdsClientQuery)">
+            <summary>
+            Call the Mds CallHome service when the client side query failed
+            </summary>
+            <param name="clientQuery">Information on the client side query</param>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.CallHomeAfterFetchingData(Microsoft.Cis.Monitoring.DataAccess.MdsClientQuery,System.Int32,System.TimeSpan)">
+            <summary>
+            Call the Mds CallHome service when the client side query succeeds
+            </summary>
+            <param name="clientQuery">Information on the client side query</param>
+            <param name="numRows">The number of rows returned by the query</param>
+            <param name="timespan">The time that the query takes</param>
+        </member>
+        <member name="F:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.tmpFileCounter">
+            <summary>
+            In caching mode MDS uses temporary files to sore the data
+            this counter maintains the uniqueness for the file names.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.tmpFileNameGenLock">
+            <summary>
+            Lock object to generate unique file names for caching MDS
+            query data temporarily.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.maxParallelTableCount">
+            <summary>
+            When the table name is a regex, many tables might be matched, this value
+            limit downloading these tables in parallel.
+            Set the default value to 5 because we have 5 regions for mds account, this is
+            to prevent regression of performance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.GetTablesAsync(System.String,System.Int32)">
+            <summary>
+            Gets the list of MDS tables from a regular expression.
+            </summary>
+            <param name="tableNameRegEx">Table name regular expression.</param>
+            <param name="nLatestVersions">Latest N version of the tables.</param>
+            <returns>List of table names.</returns>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.QueryMdsTableAsync(System.String,System.Int32,System.DateTime,System.DateTime,System.String,System.UInt32,System.Threading.CancellationTokenSource,System.Boolean,System.String,System.Int32,System.Boolean,System.Nullable{System.Int32})">
+            <summary>
+            Query MDS table in async mode.
+            </summary>
+            <param name="tableNameRegEx">Table name regular expression that means API
+            can query data from multiple tables.</param>
+            <param name="nLatestVersions">Latest N version of the table that needs to be downloaded.
+            </param>
+            <param name="from">From UTC time for the query.</param>
+            <param name="to">To UTC time for the query.</param>
+            <param name="query">Query string. If it is not passed then all the rows will be downloaded
+             in the time range.</param>
+             <param name="maxQueryExecutionTime"> Maximum time in seconds data access client waits for the
+             query to finish. If the query doesn't finish with in the time it will be cancelled and 
+             System.TimeOutException is thrown.</param>
+             <param name="cancelToken">Cancellation token resource to cancel the async query operation.
+             This parameter can be specifed when caller needs control on when to cancel the operation.
+             When the caller calls cancelToken.Cancel(), query will be cancelled and System.OperationCancelled
+             is thrown.
+             </param>
+            <param name="enableRetry">Enable retry for the query, if retry is enabled then the data 
+             chunks downloaded by MDS data access client needs to be cached in a file before returned
+             to the caller. This parameter is set to false internally if the query contains groupby,
+             take or join clauses.</param>
+            <param name="tmpDirectoryToCacheDataForRetry">Temporary file path directory for caching the
+             data chunks in retry mode.</param>
+            <param name="timeChunkSize">Time chunk size in minutes to divide the time range between 
+             from and to. Prefer to set this to zero if you don't have groupby, take, join clauses
+             in your query. If this parameter set to zero then data access client internall does
+             smart chunking. For queries where you have groupby, join and take chunking doesn't
+             work because query needs to be proceesed on the entire time range at once.</param>
+            <param name="useIndex">A flag indicates whether the secondary indexed table
+             should be searched if applicable.</param>
+            <param name="partitionIndex">A flag indictes whether this query
+             should focus on a specific MDS table partition. Please see
+             http://sharepoint/sites/AzMon/MonWiki/Wiki%20Pages/Config%202.0%20Doc.aspx  for
+             information on the MDS table partitions.</param>
+            <returns>Enumerable list of GenericLogicEntities (rows).</returns>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.QueryMdsTableAsync``1(System.String,System.Int32,System.DateTime,System.DateTime,System.String,System.UInt32,System.Threading.CancellationTokenSource,System.Boolean,System.String,System.Int32,System.Boolean,System.Nullable{System.Int32})">
+            <summary>
+            Query MDS table in async mode.
+            </summary>
+            <param typeparam="T">A type that inherits from GenericLogicEntity to return</param>
+            <param name="tableNameRegEx">Table name regular expression that means API
+            can query data from multiple tables.</param>
+            <param name="nLatestVersions">Latest N version of the table that needs to be downloaded.
+            </param>
+            <param name="from">From UTC time for the query.</param>
+            <param name="to">To UTC time for the query.</param>
+            <param name="query">Query string. If it is not passed then all the rows will be downloaded
+             in the time range.</param>
+             <param name="maxQueryExecutionTime"> Maximum time in seconds data access client waits for the
+             query to finish. If the query doesn't finish with in the time it will be cancelled and 
+             System.TimeOutException is thrown.</param>
+             <param name="cancelToken">Cancellation token resource to cancel the async query operation.
+             This parameter can be specifed when caller needs control on when to cancel the operation.
+             When the caller calls cancelToken.Cancel(), query will be cancelled and System.OperationCancelled
+             is thrown.
+             </param>
+            <param name="enableRetry">Enable retry for the query, if retry is enabled then the data 
+             chunks downloaded by MDS data access client needs to be cached in a file before returned
+             to the caller. This parameter is set to false internally if the query contains groupby,
+             take or join clauses.</param>
+            <param name="tmpDirectoryToCacheDataForRetry">Temporary file path directory for caching the
+             data chunks in retry mode.</param>
+            <param name="timeChunkSize">Time chunk size in minutes to divide the time range between 
+             from and to. Prefer to set this to zero if you don't have groupby, take, join clauses
+             in your query. If this parameter set to zero then data access client internall does
+             smart chunking. For queries where you have groupby, join and take chunking doesn't
+             work because query needs to be proceesed on the entire time range at once.</param>
+            <param name="useIndex">A flag indicates whether the secondary indexed table
+             should be searched if applicable.</param>
+            <param name="partitionIndex">A flag indictes whether this query
+             should focus on a specific MDS table partition. Please see
+             http://sharepoint/sites/AzMon/MonWiki/Wiki%20Pages/Config%202.0%20Doc.aspx  for
+             information on the MDS table partitions.</param>
+            <returns>Enumerable list of GenericLogicEntities (rows).</returns>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.GetColumnNames(System.Reflection.PropertyInfo[])">
+            <summary>
+            Get column name definitions from dynamic linq object properties.
+            </summary>
+            <param name="properties">Dynamic linq object properties.</param>
+            <returns>Dictionary of column names and their index in object value array.</returns>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.GetColumnValues(System.Object,System.Func{System.Object,System.Object}[],System.String)">
+            <summary>
+            Get column name values from dynamic linq object.
+            </summary>
+            <param name="obj">Dynamic linq object.</param>
+            <param name="getMethods">Get methods dynamic linq object properties.</param>
+            <param name="tableName">Table name to be added as an extra column.</param>
+            <returns>Array of column object values.</returns>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.StreamDataFromFileAsync(System.IO.FileStream,System.Collections.Concurrent.BlockingCollection{Microsoft.Cis.Monitoring.Mds.mdscommon.GenericLogicEntity},System.Threading.CancellationToken)">
+            <summary>
+            Streams the data stored in a temporary file.
+            </summary>
+            <param name="fstream">Temporary file name.</param>
+            <param name="collection">Output streaming object.</param>
+            <param name="token">Cancellation token.</param>
+            <returns>Total number of rows streamed.</returns>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.GetTmpFileName(System.String)">
+            <summary>
+            Generates a unique temporary file name for the data caching.
+            </summary>
+            <param name="tmpDirectory">Temporary directory name.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.SplitTimeRangeIntoChunks(System.DateTime,System.DateTime,System.UInt64,System.UInt64,System.Int32,System.String)">
+            <summary>
+            Splits the time range into multiple chunks. If the chunk size is
+            not zero then then it uses the same chunksize. Otherwise it divides
+            the time range into multiple chunks and if the chunk size comes to
+            be greater than 1 hours, it will reset to 1 hour.
+            </summary>
+            <param name="from">Starting time.</param>
+            <param name="to">Ending time.</param>
+            <param name="chunkSize">Chunk size in minutes.</param>
+            <param name="maxChunkSize">Maximum chunk size allowed.</param>
+            <param name="concurrency">Concurrency Level.</param>
+            <param name="tmpDirectory">Directory where the tmp files needs
+            to be created.</param>
+            <returns>Stack of work items.</returns>
+        </member>
+        <member name="P:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.MaxRetryNum">
+            <summary>
+            The maximum number of retries for executing a query
+            </summary>
+        </member>
+        <member name="P:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.EnableMdsCentralServiceLogging">
+            <summary>
+            By setting this flag to true, MdsDataAccessClient sends logging requests to Mds central service
+            before a query start, and after a query finishes or fail. If this flag is set to false,
+            MdsDataAccessClient will not send these logging requests to the Mds Central service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Cis.Monitoring.DataAccess.MdsDataAccessClient.MaxParallelTableCount">
+            <summary>
+            Get/Set the amount of table that can be downloaded in parallel.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Cis.Monitoring.DataAccess.WorkItem">
+            <summary>
+            Query work item class which maps
+            to one time chunk.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Cis.Monitoring.DataAccess.WorkItem.From">
+            <summary>
+            Query work item start time.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Cis.Monitoring.DataAccess.WorkItem.To">
+            <summary>
+            Query work item end time.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Cis.Monitoring.DataAccess.WorkItem.TmpFileName">
+            <summary>
+            Temporary file name to cache data to
+            support query retry option.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Cis.Monitoring.DataAccess.CancelTimerContext">
+            <summary>
+            Query cancellation timer context.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Cis.Monitoring.DataAccess.CancelTimerContext.isTimerFired">
+            <summary>
+            Boolean flag to indicate whether cancel is invoked
+            internally or by caller.
+            </summary>
+        </member>
+    </members>
+</doc>

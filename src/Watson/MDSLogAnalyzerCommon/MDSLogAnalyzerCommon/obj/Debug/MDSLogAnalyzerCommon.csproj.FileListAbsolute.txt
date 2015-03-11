@@ -1,0 +1,4 @@
+D:\gitTools\src\Watson\MDSLogAnalyzerCommon\MDSLogAnalyzerCommon\bin\Debug\MDSLogAnalyzerCommon.dll
+D:\gitTools\src\Watson\MDSLogAnalyzerCommon\MDSLogAnalyzerCommon\bin\Debug\MDSLogAnalyzerCommon.pdb
+D:\gitTools\src\Watson\MDSLogAnalyzerCommon\MDSLogAnalyzerCommon\obj\Debug\MDSLogAnalyzerCommon.dll
+D:\gitTools\src\Watson\MDSLogAnalyzerCommon\MDSLogAnalyzerCommon\obj\Debug\MDSLogAnalyzerCommon.pdb
