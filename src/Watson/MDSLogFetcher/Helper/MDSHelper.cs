@@ -43,8 +43,8 @@ namespace ClusterLogAnalyzer
                 {
                     if (client == null || DateTime.Now.Subtract(lastRefreshTime).TotalMinutes > 5)
                     {
-                        client = new MdsDataAccessClient(Settings.MdsEndPoint, "CN=MaHDInsightProd");
-                      //   client = new MdsDataAccessClient(Settings.MdsEndPoint);
+                       // client = new MdsDataAccessClient(Settings.MdsEndPoint, "CN=MaHDInsightProd");
+                        client = new MdsDataAccessClient(Settings.MdsEndPoint);
                         lastRefreshTime = DateTime.Now;
                     }
                 }

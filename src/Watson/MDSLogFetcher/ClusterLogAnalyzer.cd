@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="ClusterLogAnalyzer.Analyzers">
+    <Position X="52" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAACAAAAAAAAAAQAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Analyzers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.EmailUtils">
+    <Position X="59.75" Y="0.5" Width="9.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helper\EmailUtils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.ExcelHelper">
+    <Position X="52" Y="3" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helper\ExcelHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.MDSHelper">
+    <Position X="63" Y="4.75" Width="4.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="ClusterLogAnalyzer.MDSHelper.MDSClient">
+        <TypeIdentifier>
+          <NewMemberFileName>Helper\MDSHelper.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="ClusterLogAnalyzer.MDSHelper.MDSGlobalAzureClient">
+        <TypeIdentifier>
+          <NewMemberFileName>Helper\MDSHelper.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="ClusterLogAnalyzer.MDSHelper.MDSMooncakeClient">
+        <TypeIdentifier>
+          <NewMemberFileName>Helper\MDSHelper.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="ClusterLogAnalyzer.MDSHelper.MDSTestClient">
+        <TypeIdentifier>
+          <NewMemberFileName>Helper\MDSHelper.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helper\MDSHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.RegionHelper">
+    <Position X="51.75" Y="4.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helper\RegionHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.ExcelLogFetcher" BaseTypeListCollapsed="true">
+    <Position X="57" Y="2" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAECAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>LogFetcher\ExcelLogFetcher.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClusterLogAnalyzer.MDSLogFetcher" BaseTypeListCollapsed="true">
+    <Position X="55" Y="4.25" Width="7.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACQAEEgACAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>LogFetcher\MDSLogFetcher.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClusterLogAnalyzer.DateComparer" BaseTypeListCollapsed="true">
+    <Position X="57" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>LogFetcher\MDSLogFetcher.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClusterLogAnalyzer.Mapper">
+    <Position X="64.75" Y="2" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAIAAEAAAAACAACAAQAAAABIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.CustomReport">
+    <Position X="54" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAQAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reports\CustomReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.GlobalReport">
+    <Position X="60" Y="2" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reports\GlobalReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.OutputReport">
+    <Position X="67.75" Y="5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAEABAAAAAAAAAAAAAAAAAQgAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Reports\OutputReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.ResourceTracker">
+    <Position X="55.75" Y="7.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AgAQAAAAAAAAAAABAAAAAAQABAAAAQAAQAAAAAAAAAA=</HashCode>
+      <FileName>ResourceTracker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.Scheduler">
+    <Position X="58.75" Y="9" Width="4" />
+    <NestedTypes>
+      <Delegate Name="ClusterLogAnalyzer.Scheduler.WorkflowProgress" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Scheduler.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAEgAAAACAAAAAAABIACAQABQAAAABAAAAABAAIAAA=</HashCode>
+      <FileName>Scheduler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.Settings">
+    <Position X="53" Y="7.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAhgAAAAAAANAIAAIACQAAFAAAAAgAAACAAAgA=</HashCode>
+      <FileName>Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.TableDownloadTask">
+    <Position X="23.75" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAFAgACQEAAAIEYIIAAEACFAAACQ=</HashCode>
+      <FileName>Tasks\TableDownload\TableDownloadTask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.WorkflowEngine">
+    <Position X="67.75" Y="10" Width="6.75" />
+    <TypeIdentifier>
+      <HashCode>AQQAAAACAgAAAABAAAAEAAAABABAAAAAAAACAAIEAAA=</HashCode>
+      <FileName>WorkflowEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.Properties.Resources">
+    <Position X="68.5" Y="7.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.Properties.Settings">
+    <Position X="52" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.Tasks.CrudTable">
+    <Position X="41" Y="9.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAIAIIAAAEAAAAAAAA=</HashCode>
+      <FileName>Tasks\CrudTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.Tasks.FeatureUsageTable">
+    <Position X="6.5" Y="9.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAIAIIAAAEAAAAAAAA=</HashCode>
+      <FileName>Tasks\FeatureUsageTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.Tasks.GetFailingClustersTask">
+    <Position X="0.5" Y="3" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAABAAAAAAAEAAEAgASQEACAAEAAgACAAAAAAAAA=</HashCode>
+      <FileName>Tasks\GetFailingClustersTask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.Tasks.InvokeAnalyzersTask">
+    <Position X="44" Y="3" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABBAAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tasks\InvokeAnalyzersTask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.Tasks.LogEntryTable">
+    <Position X="9.5" Y="9.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAIIAAAEAAAAAAAA=</HashCode>
+      <FileName>Tasks\LogEntryTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.Tasks.LogResultsTask">
+    <Position X="48" Y="3" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABBAAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tasks\LogResultsTask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.Tasks.ApplicationEventsTableDownloadTask">
+    <Position X="31" Y="12.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIAAAEAAAAAAAA=</HashCode>
+      <FileName>Tasks\PerClusterTables\ApplicationEventsTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.Tasks.AvailabilityEventTableDownloadTask">
+    <Position X="34.5" Y="12.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIAAAEAAAAAAAA=</HashCode>
+      <FileName>Tasks\PerClusterTables\AvailabilityEventTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.Tasks.ClusterHealthServiceLogTableDownloadTask">
+    <Position X="12.5" Y="12.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIAAAEAAAAAAAA=</HashCode>
+      <FileName>Tasks\PerClusterTables\ClusterHealthServiceLogTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.Tasks.FilteredHadoopServiceLogTableDownloadTask">
+    <Position X="16.5" Y="12.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIAAAEAAAAAAAA=</HashCode>
+      <FileName>Tasks\PerClusterTables\FilteredHadoopServiceLogTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.Tasks.GatewayLogsTableDownloadTask">
+    <Position X="20.5" Y="12.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIAAAEAAAAAAAA=</HashCode>
+      <FileName>Tasks\PerClusterTables\GatewayLogsTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.Tasks.HadoopInstallLogTableDownloadTask">
+    <Position X="23.75" Y="12.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIAAAEAAAAAAAA=</HashCode>
+      <FileName>Tasks\PerClusterTables\HadoopInstallLogTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.Tasks.LogEntryPerClusterTableDownloadTask">
+    <Position X="27.25" Y="12.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIAAAEAAAAAAAA=</HashCode>
+      <FileName>Tasks\PerClusterTables\LogEntryPerClusterTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.Tasks.PerClusterTableDownloadTask">
+    <Position X="25.25" Y="9.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAgAAAAAAAABAAAAAAAAAAAAAAAAAIAAAAACA=</HashCode>
+      <FileName>Tasks\PerClusterTables\PerClusterTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.Tasks.SetupLogTableDownloadTask">
+    <Position X="38" Y="12.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIAAAEAAAAAAAA=</HashCode>
+      <FileName>Tasks\PerClusterTables\SetupLogTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.Tasks.WorkflowTask">
+    <Position X="24.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tasks\WorkflowTask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClusterLogAnalyzer.Tasks.TableDownload.TableDownloadFactory" BaseTypeListCollapsed="true">
+    <Position X="59.25" Y="7.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tasks\TableDownload\TableDownloadFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="ClusterLogAnalyzer.ILogFetcher">
+    <Position X="51" Y="7.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LogFetcher\ILogFetcher.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ClusterLogAnalyzer.Tasks.TableDownload.ITableDownloadFactory">
+    <Position X="49.5" Y="8.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tasks\TableDownload\TableDownloadFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

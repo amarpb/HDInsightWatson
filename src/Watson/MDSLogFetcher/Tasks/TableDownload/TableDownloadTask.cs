@@ -9,6 +9,41 @@ using MDSLogAnalyzerCommon;
 
 namespace ClusterLogAnalyzer
 {
+    //======================================================================
+    //This is the abstract class that is implemented by the following classes
+    //a) FeatureUsageTable
+    //b) LogEntryTable
+    //c) PerClusterTableDownloadTask
+    //d) CrudTable
+    //<Methods>
+    //  RunWorkflow() - this method calls the following 4 methods, namely:
+    //                  FetchLogs();
+    //                  FormatLogs();
+    //                  SaveLogs();
+    //                  PruneLogs();
+    //                  Cleanup();
+    //  GetClusterMetadata() - 
+    //  FetchLogs() - this calls GetClusterMetadata() 
+    //</Methods>
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //=======================================================================
+
     public abstract class TableDownloadTask : WorkflowTask
     {
         DateTime startTime;

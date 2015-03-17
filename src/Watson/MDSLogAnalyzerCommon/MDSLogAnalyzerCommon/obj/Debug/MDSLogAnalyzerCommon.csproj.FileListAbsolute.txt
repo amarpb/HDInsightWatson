@@ -2,3 +2,8 @@ D:\gitTools\src\Watson\MDSLogAnalyzerCommon\MDSLogAnalyzerCommon\bin\Debug\MDSLo
 D:\gitTools\src\Watson\MDSLogAnalyzerCommon\MDSLogAnalyzerCommon\bin\Debug\MDSLogAnalyzerCommon.pdb
 D:\gitTools\src\Watson\MDSLogAnalyzerCommon\MDSLogAnalyzerCommon\obj\Debug\MDSLogAnalyzerCommon.dll
 D:\gitTools\src\Watson\MDSLogAnalyzerCommon\MDSLogAnalyzerCommon\obj\Debug\MDSLogAnalyzerCommon.pdb
+F:\HDInsightWatson\HDInsightWatson\src\Watson\MDSLogAnalyzerCommon\MDSLogAnalyzerCommon\bin\Debug\MDSLogAnalyzerCommon.dll
+F:\HDInsightWatson\HDInsightWatson\src\Watson\MDSLogAnalyzerCommon\MDSLogAnalyzerCommon\bin\Debug\MDSLogAnalyzerCommon.pdb
+F:\HDInsightWatson\HDInsightWatson\src\Watson\MDSLogAnalyzerCommon\MDSLogAnalyzerCommon\obj\Debug\MDSLogAnalyzerCommon.csprojResolveAssemblyReference.cache
+F:\HDInsightWatson\HDInsightWatson\src\Watson\MDSLogAnalyzerCommon\MDSLogAnalyzerCommon\obj\Debug\MDSLogAnalyzerCommon.dll
+F:\HDInsightWatson\HDInsightWatson\src\Watson\MDSLogAnalyzerCommon\MDSLogAnalyzerCommon\obj\Debug\MDSLogAnalyzerCommon.pdb

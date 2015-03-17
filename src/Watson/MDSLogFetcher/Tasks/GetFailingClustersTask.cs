@@ -10,6 +10,32 @@ using MDSLogAnalyzerCommon;
 
 namespace ClusterLogAnalyzer.Tasks
 {
+    //======================================================================
+    //This class implements the workflow class
+    //<Fields>
+    //The following are the Fields of the Class:
+    //a) failQuery : We define this query to pick up the Failed cluster creation for which the Deployment State is Error.
+    //b) timedOutQuery: We define this query to pick up failed cluster creation for which the cluster creation timed out.
+    //c) abortQuery: We define the query to pick up failed cluster creation for which the cluster creation Aborted.
+    //d) startTime : The startTime for the request to create the cluster.
+    //e) endTime: The End Time for the request .
+    //f) EndPoint : Defined in the ClusterMetadata.cs file in the MDSLogAnalyzerCommon dll. 
+    //   Has three values: a) AzureGlobal
+    //                     b) Mooncake
+    //                     c) Test
+    // </Fields>     
+    //<Properties>
+    //ReadyToGo - Read Only Property - derived from WorkflowTask abstract class.
+    //Name - Read Only Property - returns "Get Failures"
+    //</Properties>
+    //<Methods>
+    //RunWorkflow
+    //RunWorkflow()- executes the following three methods - GetFailingClustersFromMDS(),GetAbortedClustersFromMDS(),GetTimedoutClustersFromMDS();
+    // the three methods get the list of each of the threee categories of cluster failures and then pass them along to ScheduleFailedClusterAnalysis()
+    // The ScheduleFailedClusterAnalysis Looks at the the Hashset ClustersAnalyzed and if the cluster name is not there in the Hashset initalizes 
+    // an instance of WorkflowEngine and adds an entry in the hashset.
+    //</Methods>
+    //=======================================================================
     public class GetFailingClustersTask : WorkflowTask
     {
         DateTime startTime, endTime;

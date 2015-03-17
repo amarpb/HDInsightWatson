@@ -5,3 +5,10 @@ D:\gitTools\src\Watson\NodeSetupAnalyzer\NodeSetupAnalyzer\bin\Debug\MDSLogAnaly
 D:\gitTools\src\Watson\NodeSetupAnalyzer\NodeSetupAnalyzer\obj\Debug\NodeSetupAnalyzer.csprojResolveAssemblyReference.cache
 D:\gitTools\src\Watson\NodeSetupAnalyzer\NodeSetupAnalyzer\obj\Debug\NodeSetupAnalyzer.dll
 D:\gitTools\src\Watson\NodeSetupAnalyzer\NodeSetupAnalyzer\obj\Debug\NodeSetupAnalyzer.pdb
+F:\HDInsightWatson\HDInsightWatson\src\Watson\NodeSetupAnalyzer\NodeSetupAnalyzer\bin\Debug\NodeSetupAnalyzer.dll
+F:\HDInsightWatson\HDInsightWatson\src\Watson\NodeSetupAnalyzer\NodeSetupAnalyzer\bin\Debug\NodeSetupAnalyzer.pdb
+F:\HDInsightWatson\HDInsightWatson\src\Watson\NodeSetupAnalyzer\NodeSetupAnalyzer\bin\Debug\MDSLogAnalyzerCommon.dll
+F:\HDInsightWatson\HDInsightWatson\src\Watson\NodeSetupAnalyzer\NodeSetupAnalyzer\bin\Debug\MDSLogAnalyzerCommon.pdb
+F:\HDInsightWatson\HDInsightWatson\src\Watson\NodeSetupAnalyzer\NodeSetupAnalyzer\obj\Debug\NodeSetupAnalyzer.csprojResolveAssemblyReference.cache
+F:\HDInsightWatson\HDInsightWatson\src\Watson\NodeSetupAnalyzer\NodeSetupAnalyzer\obj\Debug\NodeSetupAnalyzer.dll
+F:\HDInsightWatson\HDInsightWatson\src\Watson\NodeSetupAnalyzer\NodeSetupAnalyzer\obj\Debug\NodeSetupAnalyzer.pdb

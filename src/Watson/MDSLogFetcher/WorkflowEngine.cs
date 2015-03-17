@@ -9,6 +9,18 @@ using System.Threading;
 
 namespace ClusterLogAnalyzer
 {
+    //======================================================================
+    //This class is instantiated by the GetFailingClusterTasks.
+    //<Fields>
+    //      instance - WorkflowEngine object
+    //      lockObj - an instance of Object class.
+    //      tables - dictionary object with key - tabledownloadtask , value - clustermetadata.
+    //      timer- instance of a timer object
+    //</Fields>     
+    //<Methods>
+    //      
+    //</Methods>
+    //=======================================================================
     public class WorkflowEngine
     {
         private static WorkflowEngine instance = null;
@@ -18,6 +30,9 @@ namespace ClusterLogAnalyzer
 
         private WorkflowEngine()
         {
+
+            //we initialize the dictionary object here
+
             tables = new Dictionary<TableDownloadTask, ClusterMetadata>();
         }
 
@@ -31,7 +46,6 @@ namespace ClusterLogAnalyzer
                     {
                         instance = new WorkflowEngine();
                     }
-
                 }
             }
             return instance;
